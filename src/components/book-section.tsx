@@ -28,7 +28,7 @@ export function BookSection({
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">{title}</h2>
             {description && (
-              <p className="text-muted-foreground">{description}</p>
+              <p className="text-muted-foreground mt-2">{description}</p>
             )}
           </div>
           <Link to={linkTo}>
@@ -40,7 +40,7 @@ export function BookSection({
         </div>
         
         {showFeatured ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
             {books.map((book, index) => (
               <BookCard
                 key={book.id}
