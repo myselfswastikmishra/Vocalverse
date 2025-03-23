@@ -19,7 +19,7 @@ export function HeroSection() {
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter animate-fadeIn">
             Discover the Future of 
-            <span className="text-gradient block mt-1">Reading & Listening</span>
+            <span className="text-gradient block -mt-1">Reading & Listening</span>
           </h1>
           
           <p className="max-w-[700px] text-muted-foreground md:text-xl animate-fadeIn" style={{ animationDelay: "100ms" }}>
