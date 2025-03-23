@@ -8,8 +8,10 @@ import Index from "./pages/Index";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Upload from "./pages/Upload";
+import BookChat from "./pages/BookChat";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
+import { GeminiChatbot } from "./components/gemini-chatbot";
 
 const queryClient = new QueryClient();
 
@@ -31,9 +33,11 @@ const App = () => {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/upload" element={<Upload />} />
+            <Route path="/chat" element={<BookChat />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <GeminiChatbot />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
