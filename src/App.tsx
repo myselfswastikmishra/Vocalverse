@@ -11,21 +11,26 @@ import Upload from "./pages/Upload";
 import BookChat from "./pages/BookChat";
 import BookSettings from "./pages/BookSettings";
 import NotFound from "./pages/NotFound";
-import { useEffect } from "react";
 import { GeminiChatbot } from "./components/gemini-chatbot";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
 
-const App = () => {
-  // Theme initialization
+// Create a ThemeInitializer component to handle theme initialization
+const ThemeInitializer = () => {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
   }, []);
   
+  return null;
+};
+
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ThemeInitializer />
         <Toaster />
         <Sonner />
         <BrowserRouter>
